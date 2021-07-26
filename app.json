@@ -2,7 +2,7 @@
     "name": "ck-extractor",
     "description": "A Normal Telegram Bot Which can do nothing",
     "keywords": ["Telegram","python", "Nothing"],
-    "repository": "https://github.com/robck-sys/ck-extractor",
+    "repository": "https://github.com/rokura-sys/ck-extractor",
     "success_url": "https://t.me/RobCK",
     "stack": "container",
     "env": {
