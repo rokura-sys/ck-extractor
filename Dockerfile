@@ -8,5 +8,8 @@ RUN apt-get -yqq update
 RUN apt -yqq install python3 python3-pip wget curl mediainfo ffmpeg mkvtoolnix
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
+RUN chmod 777 start.sh
+RUN useradd -ms /bin/bash  myuser
+USER myuser
 
-CMD ["bash","run.sh"]
+CMD ./start.sh
