@@ -14,28 +14,26 @@ if __name__ == '__main__':
         client = TelegramClient("bot", APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
     except Exception:
         exit()
-        
-@client.on(events.NewMessage(pattern="/start"))
-async def _(event):
-    await eventreciever.start(event)
+    @client.on(events.NewMessage(pattern="/start"))
+    async def _(event):
+        await eventreciever.start(event)
+
+#@client.on(events.NewMessage(pattern="/help"))
+#async def _(event):
+#    await eventreciever.helps(event)
+
+#@client.on(events.NewMessage(pattern="/split_everything"))
+#async def _(event):
+#    await eventreciever.split(event)
+
+#@client.on(events.callbackquery.CallbackQuery(data=re.compile("<<")))
+#async def _(event):
+#    await eventreciever.start(event)
 
 
-@client.on(events.NewMessage(pattern="/help"))
-async def _(event):
-    await eventreciever.helps(event)
-
-@client.on(events.NewMessage(pattern="/split_everything"))
-async def _(event):
-    await eventreciever.split(event)
-
-@client.on(events.callbackquery.CallbackQuery(data=re.compile("<<")))
-async def _(event):
-    await eventreciever.start(event)
-
-
-@client.on(events.callbackquery.CallbackQuery(data=re.compile("status")))
-async def _(event):
-    await eventreciever.status(event)
+#@client.on(events.callbackquery.CallbackQuery(data=re.compile("status")))
+#async def _(event):
+#    await eventreciever.status(event)
 
 if __name__ == '__main__':
     client.run_until_disconnected()
