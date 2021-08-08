@@ -1,7 +1,8 @@
 import re ,os
 
 from telethon import TelegramClient, events
-from helpers import eventreciever
+if __name__ == '__main__':
+    from helpers import eventreciever
 
 APP_ID = int(os.environ.get("APP_ID", 12345))
 API_HASH = os.environ.get("API_HASH")
