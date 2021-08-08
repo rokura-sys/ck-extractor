@@ -1,3 +1,1 @@
-python3 ./start.py
-ls
-pwd
+python3 ./ck-extractor/start.py
