@@ -2,7 +2,7 @@ import re ,os
 
 from telethon import TelegramClient, events
 if __name__ == '__main__':
-    from helpers.eventreciever import start
+    from helpers.eventreciever import starts
 
 APP_ID = int(os.environ.get("APP_ID", 12345))
 API_HASH = os.environ.get("API_HASH")
@@ -16,7 +16,7 @@ if __name__ == '__main__':
         exit()
     @client.on(events.NewMessage(pattern="/start"))
     async def _(event):
-        await start(event)
+        await starts(event)
 
 #@client.on(events.NewMessage(pattern="/help"))
 #async def _(event):
